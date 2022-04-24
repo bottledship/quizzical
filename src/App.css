@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color: #F5F7FB;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quizzical-game {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: var(--bg-color);
+  margin: 0;
+  color: #293264;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Intro Page */
+.game-intro {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  height: 80vh;
+}
+
+.game-intro h1 {
+  font-family: Karla;
+  font-weight: 700;
+}
+
+
+
+/* Game Page */
+.question-text {
+  font-family: Karla;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.answers-pane {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 10px;
+}
+.answer {
+  font-family: Inter;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 1em;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-standard {
+  margin-top: 1rem;
+  align-self: center;
+  font-family: Inter;
+  font-size: 1.2rem;
+  padding: 1em 1.2em;
+  border-radius: 5px;
+  border: none;
+  background-color: #4D5B9E;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tabulated-result {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 0;
 }
